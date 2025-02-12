@@ -29,6 +29,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+//Task Manager application that allows users to add tasks to a list and mark them as completed.
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
