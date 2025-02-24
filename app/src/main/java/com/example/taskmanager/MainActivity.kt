@@ -4,13 +4,29 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.text.KeyboardActions
+import androidx.compose.foundation.text.KeyboardOptions
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.MaterialTheme.colorScheme
+import androidx.compose.material3.MaterialTheme.shapes
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.dimensionResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import com.example.taskmanager.ui.theme.TaskManagerTheme
 
 class MainActivity : ComponentActivity() {
@@ -19,31 +35,73 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             TaskManagerTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
             }
         }
     }
 }
 //Task Manager application that allows users to add tasks to a list and mark them as completed.
 
+//Composable for the TextField and "Add Task" button.
+//@Composable
+//fun TaskInputField(modifier: Modifier = Modifier) {
+//    val mediumPadding = dimensionResource(R.dimen.padding_medium)
+//    Card(
+//        modifier = modifier,
+//        elevation = CardDefaults.cardElevation(defaultElevation = 5.dp)
+//    ) {
+//        Column(
+//            verticalArrangement = Arrangement.spacedBy(mediumPadding),
+//            horizontalAlignment = Alignment.CenterHorizontally,
+//            modifier = Modifier.padding(mediumPadding)
+//        ) {
+//            OutlinedTextField(
+//                value = "",
+//                singleLine = true,
+//                shape = shapes.large,
+//                modifier = Modifier.fillMaxWidth(),
+//                colors = TextFieldDefaults.textFieldColors(containerColor = colorScheme.surface),
+//                onValueChange = { },
+//                label = { Text(stringResource(R.string.enter_your_word)) },
+//                isError = false,
+//                keyboardOptions = KeyboardOptions.Default.copy(
+//                    imeAction = ImeAction.Done
+//                ),
+//                keyboardActions = KeyboardActions(
+//                    onDone = { }
+//                )
+//            )
+//        }
+//    }
+//}
+
+//Composable for displaying the list of tasks.
+//Store the list of tasks in a mutableStateListOf().
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun TaskList(){
+    
+}
+
+//Composable for an individual task item (Checkbox, Text, Delete button).
+@Composable
+fun TaskItem(){
+    
+}
+//Entry point composable.
+//Use remember to store UI state.
+@Composable
+fun MainScreen(){
+
 }
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     TaskManagerTheme {
-        Greeting("Android")
+//        TaskInputField()
+//        TaskList()
+//        TaskItem()
+//        MainScreen()
     }
 }
 /*ToBeDone
