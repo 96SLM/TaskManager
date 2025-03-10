@@ -7,7 +7,10 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
+//import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
+//import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
@@ -36,6 +39,7 @@ fun Serotonin(modifier: Modifier = Modifier){
             painter = image,
             contentDescription = null,
             modifier = Modifier
+                .width(155.dp)
                 .size(100.dp),
             contentScale = ContentScale.Crop
         )
@@ -51,10 +55,17 @@ fun TaskInputField(/*modifier: Modifier = Modifier*/) {
 
 //Composable for displaying the list of tasks.
 //Store the list of tasks in a mutableStateListOf().
-@Composable
-fun TaskList(){
-    
-}
+//@Composable
+//fun TaskList(taskList: List<T>, modifier: Modifier = Modifier){
+//    LazyColumn(modifier = modifier) {
+//        items(taskList) {  ->
+//            TaskInputField( taskItem ->
+//                taskItem = taskItem,
+//                modifier = Modifier.padding(8.dp)
+//            )
+//        }
+//    }
+//}
 
 //Composable for an individual task item (Checkbox, Text, Delete button).
 @Composable
@@ -74,7 +85,7 @@ fun TaskManagerPreview() {
     TaskManagerTheme {
         Serotonin()
         TaskInputField()
-        TaskList()
+//        TaskList()
         TaskItem()
         MainScreen()
     }
