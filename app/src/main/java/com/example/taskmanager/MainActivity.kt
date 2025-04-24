@@ -51,20 +51,20 @@ fun Serotonin(modifier: Modifier = Modifier){
 fun TaskInputField(/*modifier: Modifier = Modifier*/) {
     
 }
-
-//Composable for displaying the list of tasks.
-Store the list of tasks in a mutableStateListOf().
-@Composable
-fun TaskList(taskList: List<T>, modifier: Modifier = Modifier){
-    LazyColumn(modifier = modifier) {
-        items(taskList) {  ->
-            TaskInputField( taskItem ->
-                taskItem = taskItem,
-                modifier = Modifier.padding(8.dp)
-            )
-        }
-    }
-}
+//
+////Composable for displaying the list of tasks.
+//Store the list of tasks in a mutableStateListOf().
+//@Composable
+//fun TaskList(taskList: List<T>, modifier: Modifier = Modifier){
+//    LazyColumn(modifier = modifier) {
+//        items(taskList) {  ->
+//            TaskInputField( taskItem ->
+//                taskItem = taskItem,
+//                modifier = Modifier.padding(8.dp)
+//            )
+//        }
+//    }
+//}
 
 //Composable for an individual task item (Checkbox, Text, Delete button).
 @Composable
